@@ -4,7 +4,7 @@ import {
 	DarkTheme,
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import * as React from 'react';
+import React from 'react';
 import { ColorSchemeName, View } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';

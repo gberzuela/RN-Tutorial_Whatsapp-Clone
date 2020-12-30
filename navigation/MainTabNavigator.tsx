@@ -1,12 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import * as React from 'react';
+import React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
+import ChatScreen from '../screens/ChatScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
@@ -36,7 +35,7 @@ export default function MainTabNavigator() {
 		>
 			<MainTab.Screen
 				name="Camera"
-				component={TabOneNavigator}
+				component={TabTwoNavigator}
 				options={{
 					tabBarIcon: ({ color }) => (
 						<Fontisto name="camera" color={color} size={18} />
@@ -44,8 +43,8 @@ export default function MainTabNavigator() {
 					tabBarLabel: () => null,
 				}}
 			/>
-			<MainTab.Screen name="Chats" component={TabTwoNavigator} />
-			<MainTab.Screen name="Status" component={TabOneNavigator} />
+			<MainTab.Screen name="Chats" component={ChatScreen} />
+			<MainTab.Screen name="Status" component={TabTwoNavigator} />
 			<MainTab.Screen name="Calls" component={TabTwoNavigator} />
 		</MainTab.Navigator>
 	);
@@ -59,19 +58,19 @@ function TabBarIcon(props: { name: string; color: string }) {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+// const TabOneStack = createStackNavigator<TabOneParamList>();
 
-function TabOneNavigator() {
-	return (
-		<TabOneStack.Navigator>
-			<TabOneStack.Screen
-				name="TabOneScreen"
-				component={TabOneScreen}
-				options={{ headerShown: false }}
-			/>
-		</TabOneStack.Navigator>
-	);
-}
+// function TabOneNavigator() {
+// 	return (
+// 		<TabOneStack.Navigator>
+// 			<TabOneStack.Screen
+// 				name="ChatScreen"
+// 				component={ChatScreen}
+// 				options={{ headerShown: false }}
+// 			/>
+// 		</TabOneStack.Navigator>
+// 	);
+// }
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
