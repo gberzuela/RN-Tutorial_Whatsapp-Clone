@@ -7,7 +7,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ChatScreen from '../screens/ChatScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import { MainTabParamList, TabTwoParamList } from '../types';
 
 import { Fontisto } from '@expo/vector-icons';
 
@@ -58,19 +58,6 @@ function TabBarIcon(props: { name: string; color: string }) {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-// const TabOneStack = createStackNavigator<TabOneParamList>();
-
-// function TabOneNavigator() {
-// 	return (
-// 		<TabOneStack.Navigator>
-// 			<TabOneStack.Screen
-// 				name="ChatScreen"
-// 				component={ChatScreen}
-// 				options={{ headerShown: false }}
-// 			/>
-// 		</TabOneStack.Navigator>
-// 	);
-// }
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 

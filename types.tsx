@@ -10,10 +10,6 @@ export type MainTabParamList = {
 	Calls: undefined;
 };
 
-export type TabOneParamList = {
-	ChatScreen: undefined;
-};
-
 export type TabTwoParamList = {
 	TabTwoScreen: undefined;
 };
@@ -26,6 +22,7 @@ export type User = {
 
 export type Message = {
 	id: string;
+	user: User;
 	content: string;
 	createdAt: string;
 };
