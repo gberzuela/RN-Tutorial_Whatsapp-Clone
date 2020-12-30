@@ -71,8 +71,7 @@ export default [{
   }, {
     id: 'u6',
     name: 'Elon Musk',
-    imageUrl: '
-    https://robohash.org/ElonMusk',
+    imageUrl: 'https://robohash.org/ElonMusk',
   }],
   lastMessage: {
     id: 'm5',

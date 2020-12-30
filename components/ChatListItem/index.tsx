@@ -11,12 +11,20 @@ export type ChatListItemProps = {
 const ChatListItem = (props: ChatListItemProps) => {
 	const { chatRoom } = props;
 	const user = chatRoom.users[1];
-	console.log(user);
 
 	return (
-		<View>
-			<Image source={{ uri: user.imageUrl }} />
-			<Text>{chatRoom.lastMessage.content}</Text>
+		<View style={styles.container}>
+			<View style={styles.leftContainer}>
+				<Image source={{ uri: user.imageUrl }} style={styles.avatar} />
+
+				<View style={styles.midContainer}>
+					<Text style={styles.userName}>{user.name}</Text>
+					<Text style={styles.lastMessage}>{chatRoom.lastMessage.content}</Text>
+				</View>
+			</View>
+
+			{/* <Text>{chatRoom.lastMessage.createdAt}</Text> */}
+			<Text styles={styles.time}>Yesterday</Text>
 		</View>
 	);
 };
