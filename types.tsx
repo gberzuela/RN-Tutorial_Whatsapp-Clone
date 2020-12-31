@@ -20,6 +20,7 @@ export type User = {
 	id: string;
 	name: string;
 	imageUrl: string;
+	status: string;
 };
 
 export type Message = {

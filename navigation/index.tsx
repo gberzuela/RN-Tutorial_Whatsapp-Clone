@@ -1,16 +1,19 @@
+import React from 'react';
 import {
 	NavigationContainer,
 	DefaultTheme,
 	DarkTheme,
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import React from 'react';
 import { ColorSchemeName, View } from 'react-native';
 
-import { RootStackParamList } from '../types';
-import NotFoundScreen from '../screens/NotFoundScreen';
 import MainTabNavigator from './MainTabNavigator';
+import { RootStackParamList } from '../types';
+
+import NotFoundScreen from '../screens/NotFoundScreen';
 import ChatRoomScreen from '../screens/ChatRoomScreen';
+import ContactsScreen from '../screens/ContactsScreen';
+
 import LinkingConfiguration from './LinkingConfiguration';
 import Colors from '../constants/Colors';
 
@@ -109,6 +112,12 @@ function RootNavigator() {
 						</View>
 					),
 				})}
+			/>
+
+			<Stack.Screen
+				name="Contacts"
+				component={ContactsScreen}
+				options={{ title: 'Oops!' }}
 			/>
 
 			<Stack.Screen
