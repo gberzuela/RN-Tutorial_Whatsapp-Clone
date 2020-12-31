@@ -4,7 +4,7 @@ import { useRoute } from '@react-navigation/native';
 
 import ChatMessage from '../components/ChatMessage';
 import chatRoomData from '../data/Chats';
-import BG from '../assests/images/BG.png';
+import BG from '../assets/images/BG.png';
 
 const ChatRoomScreen = () => {
 	const route = useRoute();
